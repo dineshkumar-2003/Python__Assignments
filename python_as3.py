@@ -4,15 +4,12 @@ class Calculator:
         self.num_1=num_1
         self.num_2=num_2
 
-
     def display(self):
         print(f"The parameters passed through __init__ are  num_1 ={self.num_1} and num_2={self.num_2}")
-
 
     def addition(self,num_3=0): # num_3=0 is the Kwarg
         return self.num_1+self.num_2+num_3
     
-
     def subtraction(self):
         choice=int(input("Enter 1 for num1 - num2 or 2 for num2 - num1: "))
         match choice:   #Using match case
@@ -21,22 +18,19 @@ class Calculator:
             case 2:
                 return self.num_2-self.num_1    
             
-
     def multiplication(self,num_1,num_2,*arg):   #Using arg
         ans=num_1*num_2        # Accessing values from parameters 
         for args in arg:
             ans=ans*args
             return ans
         
-
     def division(self,num_1,num_2):
         try:        #Using try and except
             ans=num_1//num_2
         except ZeroDivisionError as e:
             print("Divide by zero is not possible :",e)
 
-
-
+            
 obj_1=Calculator(10,20)  #Creating the object for the class
 
 obj_1.display()
