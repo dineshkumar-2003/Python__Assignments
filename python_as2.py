@@ -220,3 +220,35 @@ Output:
 9
 10
 '''
+
+#Printing words except w and o using continue
+str='hello world'
+for char in str:
+    if char=='w' or char=='o':
+        continue
+    else:
+        print(char,end='')
+
+'''
+OUTPUT :
+hell rld
+'''
+
+#To count numner of o's in str using continue
+str='Welcome to python'
+count=0
+for char in str:
+    if char=='o':
+        print(char)
+        count+=1
+    else:
+        continue
+print(f'Count of o in {str} is : {count}')
+
+'''
+OUTPUT:
+o
+o
+o
+Count of o in Welcome to python is : 3
+'''
