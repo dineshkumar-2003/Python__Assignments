@@ -4,7 +4,10 @@ class BankAccount:                  #Parent class for bank account
         self.otp=otp
 
     #Method to check the otp
-    def check_otp(self):                
+    def check_otp(self):          
+        '''
+        This method is used to check the otp sent by the bank and the otp entered by the user is same or not
+        '''      
         otp_check=int(input("Enter your otp number :"))
         if self.otp==otp_check:
             return True
@@ -14,6 +17,9 @@ class BankAccount:                  #Parent class for bank account
 
     #Method to check the balance amount
     def check_balance(self):
+        '''
+        This method is used to check the balance of the user's account
+        '''
         if self.check_otp():
             print(f'Your balance is {self.balance}')
         else:
@@ -24,6 +30,10 @@ class BankActions(BankAccount):
 
     #Method to deposit the money
     def deposit(self):
+        '''
+        This function is used to deposit the amount to the user's bank account
+        After checking the otp the deposit amount is added to the user's balance
+        '''
         if self.check_otp():
             amount=int(input('Enter the amount you need to deposit :'))
             self.balance+=amount
@@ -32,6 +42,10 @@ class BankActions(BankAccount):
 
     #Method to withdraw the money
     def withdraw(self):
+        '''
+        This function is used to withdraw the amount from the user's bank account
+        After checking the otp the withdrawal amount is deducted from the user's balance
+        '''
         if self.check_otp():
             amount=int(input('Enter the amount you need to withdraw :'))
             if (amount>self.balance):
