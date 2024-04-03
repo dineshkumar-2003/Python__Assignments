@@ -120,7 +120,7 @@ class College:
         stu_3=student[2]
         average_marks=[stu_1.average(),stu_2.average(),stu_3.average()]
         average_marks.sort()
-        print(f'Ranks for high marks :\n 1 . {average_marks[0]}\n 2 . {average_marks[1]}\n 3 . {average_marks[2]}')
+        print(f'Ranks for high marks :\n 1 . {average_marks[2]}\n 2 . {average_marks[1]}\n 3 . {average_marks[0]}')
 
 
 student_1=College('Dinesh',12,'CSE')
@@ -167,9 +167,9 @@ Subject 2   :  85
 Subject 3   :  78
 Grade :O Grade
 Ranks for high marks :
- 1 . 80
+ 1 . 99
  2 . 89
- 3 . 99
+ 3 . 80
 '''
 
 
