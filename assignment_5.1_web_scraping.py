@@ -26,7 +26,7 @@ class WebScraping:
         This function is used to get the product name of all the laptops in the web page
         '''
         self.soup=BeautifulSoup(self.response .content,'html.parser')
-        self.product_name=self.soup.findAll('div',class_='_4rR01T')
+        self.product_name=self.soup.findAll('div',class_='KzDlHZ')
         # print(len(self.product_name))
         if self.product_name:
             print(f'Product Name  : {self.product_name[0].text}')
@@ -39,7 +39,7 @@ class WebScraping:
         '''
         This function is used to get the original price of all the laptops in the web page
         '''
-        self.original_price=self.soup.findAll('div',class_='_3I9_wc _27UcVY')
+        self.original_price=self.soup.findAll('div',class_='yRaY8j ZYYwLA')
         # print(len(self.original_price))
         if self.original_price:
             print(f'Original Price  : {self.original_price[0].text}')
@@ -52,7 +52,7 @@ class WebScraping:
         '''
         This function is used to get the discounted price of all the laptops in the web page
         '''
-        self.discounted_price=self.soup.findAll('div',class_='_30jeq3 _1_WHN1')
+        self.discounted_price=self.soup.findAll('div',class_='Nx9bqj _4b5DiR')
         # print(len(self.discounted_price))
         if self.discounted_price:
             print(f'Discounted price  : {self.discounted_price[0].text}')
@@ -65,7 +65,7 @@ class WebScraping:
         '''
         This function is used to get the product ratings of all the laptops in the web page
         '''
-        self.ratings=self.soup.findAll('div',class_='_3LWZlK')
+        self.ratings=self.soup.findAll('div',class_='XQDdHH')
         # print(len(self.ratings))
         if self.ratings :
             print(f' Ratings   : {self.ratings [0].text}')
@@ -76,7 +76,7 @@ class WebScraping:
         '''
         This function is used to get the specifications of all the laptops in the web page
         '''
-        self.specs=self.soup.find_all('ul',class_='_1xgFaf')
+        self.specs=self.soup.find_all('ul',class_='G4BRas')
         if self.specs:
                 print('Specifications :')
                 for ele in self.specs[0]:
@@ -89,7 +89,7 @@ class WebScraping:
         This function is used to navigate to the laptop page which is selected
         '''
         web_link='https://www.flipkart.com'
-        link=self.soup.find('a',class_='_1fQZEK')
+        link=self.soup.find('a',class_='CGtC98')
         if link:
             self.next_link=web_link+link['href']
 
@@ -112,7 +112,7 @@ class WebScraping:
             self.next_soup=BeautifulSoup(self.response_2.content,'html.parser')
         else:
             print('Error occoured next page not found')
-        offer=self.next_soup.find('div',class_='_3TT44I')
+        offer=self.next_soup.find('div',class_='I+EQVr')
         if offer:
             for item in offer:
                 print(item.text)
@@ -123,7 +123,7 @@ class WebScraping:
         '''
         This function is used to get the highlights of the selected laptop
         '''
-        highlight=self.next_soup.find('div',class_='_2418kt')
+        highlight=self.next_soup.find('div',class_='xFVion')
         if highlight:
             print('Highlights :')
             for item in highlight:
